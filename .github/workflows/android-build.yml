@@ -24,7 +24,7 @@ jobs:
           npm install
           npm install @capacitor/cli @capacitor/core @capacitor/android
 
-      - name: Build Web Assets
+      - name: Prepare Web Assets
         run: |
           mkdir -p www
           cp index.html www/
@@ -35,10 +35,7 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Initialize Capacitor
+      - name: Initialize Capacitor Android
         run: |
           npx cap init "Constitution App" com.uofk.constitution --web-dir www --confirm
           npx cap add android

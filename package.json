@@ -2,9 +2,6 @@
   "name": "constitution-uofk-app",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "build": "mkdir -p www && cp index.html www/"
-  },
   "dependencies": {
     "@capacitor/android": "^6.0.0",
     "@capacitor/core": "^6.0.0"
