@@ -19,8 +19,10 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install Dependencies
+        run: |
+          npm install
+          npm install @capacitor/cli @capacitor/core @capacitor/android
 
       - name: Build Web Assets
         run: |
@@ -38,7 +40,7 @@ jobs:
 
       - name: Initialize Capacitor
         run: |
-          npx cap init "Constitution App" com.uofk.constitution --web-dir www
+          npx cap init "Constitution App" com.uofk.constitution --web-dir www --confirm
           npx cap add android
 
       - name: Sync Capacitor
