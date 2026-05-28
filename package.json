@@ -4,8 +4,7 @@
   "description": "دستور رابطة الطلاب ذوي الإعاقة البصرية بجامعة الخرطوم",
   "main": "index.html",
   "scripts": {
-    "build": "mkdir -p www && cp index.html www/",
-    "cap-init": "cap init \"Constitution App\" com.uofk.constitution --web-dir www"
+    "build": "mkdir -p www && cp index.html www/"
   },
   "author": "Manus Agent",
   "license": "MIT",
