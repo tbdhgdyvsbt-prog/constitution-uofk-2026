@@ -1,28 +1,19 @@
 {
-  "name": "constitution-app",
+  "name": "constitution-uofk-app",
   "version": "1.0.0",
   "description": "دستور رابطة الطلاب ذوي الإعاقة البصرية بجامعة الخرطوم",
-  "main": "main.js",
+  "main": "index.html",
   "scripts": {
-    "start": "electron .",
-    "build": "electron-builder"
+    "build": "mkdir -p www && cp index.html www/",
+    "cap-init": "cap init \"Constitution App\" com.uofk.constitution --web-dir www"
   },
   "author": "Manus Agent",
   "license": "MIT",
-  "devDependencies": {
-    "electron": "^25.0.0",
-    "electron-builder": "^24.4.0"
+  "dependencies": {
+    "@capacitor/android": "^5.0.0",
+    "@capacitor/core": "^5.0.0"
   },
-  "build": {
-    "appId": "com.uofk.constitution",
-    "productName": "ConstitutionApp",
-    "win": {
-      "target": "portable"
-    },
-    "files": [
-      "index.html",
-      "main.js",
-      "package.json"
-    ]
+  "devDependencies": {
+    "@capacitor/cli": "^5.0.0"
   }
 }

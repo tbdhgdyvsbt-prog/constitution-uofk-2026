@@ -1,0 +1,6 @@
+{
+  "appId": "com.uofk.constitution",
+  "appName": "Constitution App",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
