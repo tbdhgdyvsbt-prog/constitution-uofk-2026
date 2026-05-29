@@ -34,16 +34,14 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Initialize Capacitor Android
+      - name: Initialize Capacitor
         run: |
-          npx cap init "Constitution App" com.uofk.constitution --web-dir www --confirm
+          npx cap init "Constitution App" com.uofk.constitution --web-dir www
           npx cap add android
 
-      - name: Sync Capacitor
-        run: npx cap sync
-
-      - name: Build Android APK
+      - name: Sync and Build
         run: |
+          npx cap sync
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
